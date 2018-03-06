@@ -20,3 +20,9 @@ Make your ```webhook.php``` file accessible, for example:
 ```
 http://satis.yourcompany.com/webhook.php
 ```
+
+## Serve with PHPs builtin Webserver
+
+In case your cli command requires more privilidges/permissions then your default webserver user has (e.g. www-data) you might also use php's builtin webserver. Start it with the required user and proxy incoming scripts thru your regular webserver.
+
+nohup php -S 127.0.0.1:8000 & > /dev/null 2>&1
